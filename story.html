@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE STORY | AETHEREAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- CSS Variables & Reset --- */
+        :root {
+            --bg-cream: #F5F4F0;
+            --bg-white: #FFFFFF;
+            --text-charcoal: #2C2C2C;
+            --text-muted: #6E6E6E;
+            --accent-gold: #D4AF37;
+            --accent-sage: #8A9A5B;
+            --border-light: rgba(0, 0, 0, 0.08);
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --section-spacing-lg: 120px;
+            --transition-smooth: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-charcoal);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Typography --- */
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+            color: var(--text-charcoal);
+        }
+
+        h1 {
+            font-size: clamp(3rem, 5vw, 5rem);
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 3vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .container {
+            width: 88%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-padding {
+            padding: var(--section-spacing-lg) 0;
+        }
+
+        .sub-heading {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-sage);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        /* --- Header --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 6%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            color: var(--text-charcoal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 3.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav a {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-charcoal);
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .nav-book-btn {
+            padding: 10px 24px;
+            border: 1px solid var(--text-charcoal);
+        }
+
+        /* --- Story Content --- */
+        .story-hero {
+            height: 60vh;
+            margin-top: 80px;
+            background-image: url('assets/story-hero.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-text-block {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .grid-visuals {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .grid-visuals img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1A1A1A;
+            color: #999;
+            padding: 5rem 0 2rem;
+            font-size: 0.9rem;
+            margin-top: 100px;
+        }
+
+        footer .logo {
+            color: #fff;
+            display: block;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">AETHEREAL</a>
+        <nav>
+            <ul>
+                <li><a href="story.html" style="font-weight: 600; border-bottom: 1px solid;">The Hotel</a></li>
+                <li><a href="suites.html">Suites</a></li>
+                <li><a href="wellness.html">Wellness</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="#" class="nav-book-btn">Reserve</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="story-hero"></section>
+
+    <section class="section-padding container">
+        <div class="story-text-block">
+            <span class="sub-heading">Our Origin</span>
+            <h1>A Vision of Pure Intent</h1>
+            <p>Founded on the windswept cliffs of the Coast, Aethereal was born from a singular desire: to create a
+                space where the architecture does not compete with nature, but bows to it. Our story is one of
+                reduction, of finding the profound in the simple.</p>
+            <p>Every stone used in our foundation was sourced from local quarries, and every angle of our structure was
+                designed to frame the shifting light of the Pacific. We believe that by creating silence in our
+                surroundings, we allow our guests to hear themselves again.</p>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="grid-visuals">
+            <img src="assets/hero-bg.png" alt="Architecture Detail">
+            <div>
+                <span class="sub-heading">The Architecture</span>
+                <h2>Silent Structures</h2>
+                <p>Designed by lead architect Elena R., the sanctuary utilizes "Living Concrete"—a material that
+                    breathes and age gracefully alongside the coastal flora. The building is not merely a structure, but
+                    an extension of the cliffside itself.</p>
+                <p>Our commitment to sustainability is woven into the very fabric of the hotel, with passive cooling
+                    systems and a water filtration system that returns more than it takes from the earth.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo">AETHEREAL</a>
+            <p>&copy; 2025 Aethereal Hospitality. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
