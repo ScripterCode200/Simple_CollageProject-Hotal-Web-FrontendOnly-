@@ -17,8 +17,8 @@
             --bg-cream: #F5F4F0;
             /* Slightly deeper cream for warmth */
             --bg-white: #FFFFFF;
-            --text-charcoal: #2C2C2C;
-            --text-muted: #6E6E6E;
+            --text-charcoal: #232323;
+            --text-muted: #4A4A4A;
             --accent-gold: #D4AF37;
             /* Muted Gold */
             --accent-sage: #8A9A5B;
@@ -57,7 +57,8 @@
         h2,
         h3,
         h4,
-        h5 {
+        h5,
+        h6 {
             font-family: var(--font-serif);
             font-weight: 400;
             line-height: 1.2;
@@ -78,6 +79,13 @@
         h3 {
             font-size: 1.5rem;
             letter-spacing: 0.5px;
+        }
+
+        h6 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+            color: #ECEBE6;
         }
 
         p {
@@ -489,7 +497,7 @@
         .cta-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.45);
         }
 
         .cta-content {
@@ -535,8 +543,8 @@
 
         /* --- Footer --- */
         footer {
-            background: #1A1A1A;
-            color: #999;
+            background: #111111;
+            color: #CCCCCC;
             padding: 5rem 0 2rem;
             font-size: 0.9rem;
         }
@@ -655,7 +663,7 @@
             <div class="motive-card">
                 <img src="assets/suite-1.png" alt="Minimalist room" class="motive-image">
                 <div class="motive-overlay">
-                    <h3>The Retreats</h3>
+                    <h6>The Retreats</h6>
                     <p>Private sanctuaries designed for profound rest and creative clarity.</p>
                 </div>
             </div>
@@ -663,7 +671,7 @@
             <div class="motive-card">
                 <img src="assets/spa-ritual.png" alt="Spa treatment" class="motive-image">
                 <div class="motive-overlay">
-                    <h3>Wellness</h3>
+                    <h6>Wellness</h6>
                     <p>Holistic treatments inspired by ancient rituals and modern science.</p>
                 </div>
             </div>
@@ -671,7 +679,7 @@
             <div class="motive-card">
                 <img src="assets/dining-hero.png" alt="Fine dining" class="motive-image">
                 <div class="motive-overlay">
-                    <h3>Culinary</h3>
+                    <h6>Culinary</h6>
                     <p>Farm-to-table gastronomy that honors the integrity of pure ingredients.</p>
                 </div>
             </div>
