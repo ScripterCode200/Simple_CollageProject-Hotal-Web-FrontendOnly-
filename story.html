@@ -16,7 +16,7 @@
         :root {
             --bg-cream: #F5F4F0;
             --bg-white: #FFFFFF;
-            --text-charcoal: #111111;
+            --text-charcoal: #232323;
             --text-muted: #4A4A4A;
             --accent-gold: #D4AF37;
             --accent-sage: #8A9A5B;
@@ -136,6 +136,57 @@
             border: 1px solid var(--text-charcoal);
         }
 
+        /* --- Mobile Menu --- */
+        #menu-toggle {
+            display: none;
+        }
+
+        .menu-btn {
+            display: none;
+            cursor: pointer;
+            z-index: 101;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .menu-btn span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--text-charcoal);
+            transition: var(--transition-smooth);
+        }
+
+        /* --- Small Screen Overlay --- */
+        .small-screen-warning {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--bg-cream);
+            z-index: 1000;
+            padding: 2rem;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .small-screen-warning p {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--text-charcoal);
+        }
+
+        @media (max-width: 300px) {
+            .small-screen-warning {
+                display: flex;
+            }
+
+            body {
+                overflow: hidden;
+            }
+        }
+
         /* --- Story Content --- */
         .story-hero {
             height: 60vh;
@@ -181,12 +232,73 @@
             display: block;
             margin-bottom: 2rem;
         }
+
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: var(--bg-white);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: var(--transition-smooth);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+
+            #menu-toggle:checked~nav {
+                right: 0;
+            }
+
+            #menu-toggle:checked~.menu-btn span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            #menu-toggle:checked~.menu-btn span:nth-child(2) {
+                opacity: 0;
+            }
+
+            #menu-toggle:checked~.menu-btn span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            .grid-visuals {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <div class="small-screen-warning">
+        <p>Please use a device with a bigger screen for a better experience.</p>
+    </div>
+
     <header>
         <a href="index.html" class="logo">AETHEREAL</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
         <nav>
             <ul>
                 <li><a href="story.html" style="font-weight: 600; border-bottom: 1px solid;">The Hotel</a></li>
